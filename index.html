@@ -4,7 +4,7 @@
 .page{background:#fff;color:#111;font-family:var(--font-sans,system-ui,sans-serif);padding:0 0 48px;}
 .hero{text-align:center;padding:48px 24px 32px;border-bottom:1px solid #e8e8e8;}
 .hero h1{font-size:32px;font-weight:500;letter-spacing:-0.5px;color:#111;}
-.hero p{font-size:14px;color:#777;margin-top:6px;letter-spacing:1px;}
+.hero-sub{font-size:14px;color:#e05080;margin-top:8px;letter-spacing:1px;display:flex;align-items:center;justify-content:center;gap:6px;}
 .sec-label{font-size:11px;font-weight:500;letter-spacing:2px;color:#aaa;text-transform:uppercase;text-align:center;padding:36px 0 20px;}
 .builder{display:grid;grid-template-columns:190px 1fr 190px;gap:0;max-width:680px;margin:0 auto;align-items:center;padding:0 16px;}
 .options-col{display:flex;flex-direction:column;gap:20px;}
@@ -30,23 +30,64 @@
 .p-name{font-size:12px;font-weight:500;color:#111;margin-bottom:4px;}
 .p-tag{font-size:10px;color:#aaa;letter-spacing:0.5px;}
 .about-section{max-width:600px;margin:0 auto;padding:0 24px;}
-.about-inner{display:flex;gap:20px;align-items:flex-start;padding:24px;border:1px solid #e8e8e8;border-radius:12px;}
+.about-inner{display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px;border:1px solid #e8e8e8;border-radius:12px;text-align:center;}
 .avatar{width:56px;height:56px;border-radius:50%;background:#f0f0f0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#888;}
 .bio-text{font-size:13px;color:#555;line-height:1.8;}
 .bio-name{font-size:16px;font-weight:500;color:#111;margin-bottom:6px;}
-.cta-section{text-align:center;padding:36px 24px 0;}
-.cta-sub{font-size:13px;color:#888;margin-bottom:16px;}
+.other-input{width:100%;margin-top:6px;border:1px solid #e0e0e0;border-radius:8px;padding:6px 10px;font-size:12px;color:#444;outline:none;font-family:inherit;}
+.other-input:focus{border-color:#bbb;}
+.notes-area{width:100%;margin-top:10px;border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;font-size:12px;color:#444;resize:vertical;min-height:70px;font-family:inherit;outline:none;line-height:1.6;}
+.notes-area:focus{border-color:#bbb;}
+.ig-section{max-width:680px;margin:0 auto;padding:0 24px;}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.ig-tile{aspect-ratio:1;border-radius:10px;overflow:hidden;background:#f5f5f5;display:flex;align-items:center;justify-content:center;}
+.ig-tile img{width:100%;height:100%;object-fit:cover;display:block;}
+.ig-tile-placeholder{display:flex;flex-direction:column;align-items:center;gap:6px;color:#ccc;}
+.ig-follow{text-align:center;margin-top:14px;font-size:12px;color:#888;}
+.ig-follow a{color:#c13584;text-decoration:none;font-weight:500;}
+/* Info / Good to know section */
+.info-section{max-width:600px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:12px;}
+.info-card{display:flex;gap:16px;align-items:flex-start;background:#fafafa;border:1px solid #f0f0f0;border-radius:12px;padding:18px 20px;}
+.info-icon{font-size:22px;flex-shrink:0;margin-top:1px;}
+.info-body{flex:1;}
+.info-title{font-size:13px;font-weight:600;color:#111;margin-bottom:5px;}
+.info-text{font-size:13px;color:#555;line-height:1.75;}
+.info-text strong{color:#333;font-weight:600;}
 .wa-btn{display:inline-flex;align-items:center;gap:10px;background:#111;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;}
 .wa-btn:hover{background:#333;}
+.cta-section{text-align:center;padding:36px 24px 0;}
 .footer{text-align:center;font-size:11px;color:#ccc;padding:32px 24px 16px;letter-spacing:0.5px;}
-</style>
+/* Community section */
+.community-section{max-width:600px;margin:0 auto;padding:0 24px;}
+.community-inner{border:1px solid #e8e8e8;border-radius:12px;padding:24px;}
+.community-form{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+.comm-input{border:1px solid #e0e0e0;border-radius:8px;padding:9px 12px;font-size:13px;color:#444;font-family:inherit;outline:none;}
+.comm-input:focus{border-color:#bbb;}
+.comm-textarea{border:1px solid #e0e0e0;border-radius:8px;padding:9px 12px;font-size:13px;color:#444;font-family:inherit;outline:none;resize:vertical;min-height:72px;line-height:1.6;}
+.comm-textarea:focus{border-color:#bbb;}
+.comm-row{display:flex;gap:8px;}
+.comm-fav{flex:1;}
+.comm-submit{background:#111;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;align-self:flex-end;}
+.comm-submit:hover{background:#333;}
+.comments-list{display:flex;flex-direction:column;gap:14px;}
+.comment-card{background:#fafafa;border:1px solid #f0f0f0;border-radius:10px;padding:14px 16px;}
+.comment-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.comment-avatar{width:30px;height:30px;border-radius:50%;background:#fadadd;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#c05070;flex-shrink:0;}
+.comment-name{font-size:13px;font-weight:500;color:#111;}
+.comment-fav{font-size:11px;color:#e05080;background:#fff0f4;border-radius:100px;padding:2px 8px;margin-left:auto;}
+.comment-text{font-size:12px;color:#666;line-height:1.7;}
+.no-comments{font-size:13px;color:#bbb;text-align:center;padding:16px 0;}
 
-<h2 class="sr-only">YJbakes — custom cake builder and product showcase</h2>
+</style>
 
 <div class="page">
   <div class="hero">
     <h1>YJbakes</h1>
-    <p>Handmade with love</p>
+    <div class="hero-sub">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#e05080"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      Handmade with love
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#e05080"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+    </div>
   </div>
 
   <div class="sec-label">Build your cake</div>
@@ -60,10 +101,11 @@
   <div class="summary-box">
     <div class="summary-title">Your selection</div>
     <div class="summary-chips" id="summaryChips"></div>
+    <textarea class="notes-area" placeholder="Let me know if you have any preference or request as well as any allergies you have. I can also make it vegan."></textarea>
   </div>
 
   <div class="divider"></div>
-  <div class="sec-label">Our bakes</div>
+  <div class="sec-label">Top bakes</div>
   <div class="showcase">
     <div class="product-grid">
 
@@ -83,7 +125,7 @@
           <ellipse cx="40" cy="8" rx="1.5" ry="1.5" fill="#ff8020"/>
         </svg>
         <div class="p-name">Celebration layer cake</div>
-        <div class="p-tag">Custom orders</div>
+        <div class="p-tag">Bestseller · Custom orders</div>
       </div>
 
       <!-- Square cake -->
@@ -101,7 +143,7 @@
           <circle cx="53" cy="16" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/>
         </svg>
         <div class="p-name">Square cake</div>
-        <div class="p-tag">Celebration</div>
+        <div class="p-tag">Custom orders</div>
       </div>
 
       <!-- Muffins / cupcakes -->
@@ -120,7 +162,7 @@
           <circle cx="53" cy="50" r="2" fill="#f0a020"/><circle cx="61" cy="51" r="2" fill="#f0a020"/><circle cx="57" cy="47" r="2" fill="#7060c0"/>
         </svg>
         <div class="p-name">Muffins &amp; cupcakes</div>
-        <div class="p-tag">Bestseller</div>
+        <div class="p-tag">Other sweet things</div>
       </div>
 
       <!-- Loaf -->
@@ -161,20 +203,94 @@
     </div>
   </div>
 
+  <!-- Instagram gallery -->
+  <div class="divider"></div>
+  <div class="sec-label">From the kitchen</div>
+  <div class="ig-section">
+    <div class="ig-grid" id="igGrid">
+      <!-- placeholders shown while loading -->
+      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+    </div>
+    <div class="ig-follow">See more on Instagram — <a href="https://instagram.com/_yjbakes" target="_blank">@_yjbakes</a></div>
+  </div>
+
+  <!-- Community section -->
+  <div class="divider"></div>
+  <div class="sec-label">Cake lovers 🎂</div>
+  <div class="community-section">
+    <div class="community-inner">
+      <div class="community-form">
+        <div class="comm-row">
+          <input class="comm-input comm-fav" id="commName" type="text" placeholder="Your name" maxlength="40"/>
+          <input class="comm-input comm-fav" id="commFav" type="text" placeholder="Favourite cake 🎂" maxlength="60"/>
+        </div>
+        <textarea class="comm-textarea" id="commText" placeholder="What do you love about cakes? Share a memory, a flavour, anything! 💬" maxlength="300"></textarea>
+        <button class="comm-submit" onclick="submitComment()">Share ❤️</button>
+      </div>
+      <div class="comments-list" id="commentsList">
+        <div class="no-comments">Be the first to share your love of cake!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="sec-label">Good to know</div>
+  <div class="info-section">
+
+    <!-- Pricing -->
+    <div class="info-card">
+      <div class="info-icon">💷</div>
+      <div class="info-body">
+        <div class="info-title">Pricing</div>
+        <div class="info-text">Cakes are priced between <strong>£20–£25</strong>. The base price starts at <strong>£20</strong> for a classic cake, and goes up to <strong>£25</strong> for layered cakes, vegan, gluten-free, or allergy-friendly options. Get in touch and I'll give you an exact quote based on your order.</div>
+      </div>
+    </div>
+
+    <!-- Packaging -->
+    <div class="info-card">
+      <div class="info-icon">📦</div>
+      <div class="info-body">
+        <div class="info-title">Packaging</div>
+        <div class="info-text">Every cake is carefully placed in a dedicated <strong>cake box</strong> to keep it secure and fresh. Your cake will arrive looking exactly as it should — ready to enjoy or present as a gift.</div>
+      </div>
+    </div>
+
+    <!-- Pre-order -->
+    <div class="info-card">
+      <div class="info-icon">📅</div>
+      <div class="info-body">
+        <div class="info-title">Pre-order only</div>
+        <div class="info-text">All cakes are made <strong>to order</strong> so they're as fresh as possible for you. Please get in touch in advance to place your order and we'll agree on a date that works for both of us.</div>
+      </div>
+    </div>
+
+    <!-- Delivery -->
+    <div class="info-card">
+      <div class="info-icon">🚗</div>
+      <div class="info-body">
+        <div class="info-title">Collection &amp; delivery</div>
+        <div class="info-text"><strong>Collection is free</strong> — just come pick it up! I also offer <strong>free delivery</strong> for nearby locations. For areas further away, a small delivery fee may apply depending on the distance. Message me and we can sort something out. 😊</div>
+      </div>
+    </div>
+
+  </div>
+
   <div class="divider"></div>
   <div class="sec-label">Meet the baker</div>
   <div class="about-section">
     <div class="about-inner">
       <div class="avatar">YJ</div>
-      <div>
-        <div class="bio-name">Yunji</div>
-        <div class="bio-text">I started baking during the pandemic as a hobby — and before long I was making cakes for friends and family for birthdays and special occasions. Their joy and encouragement inspired me to share my passion with the wider community.<br><br>I love giving careful attention to each person's taste while using quality, healthier ingredients. Handmade cakes feel personal and special in a way that store-bought ones simply can't match. I'd love to bake for you.</div>
-      </div>
+      <div class="bio-name">Yunji</div>
+      <div class="bio-text">I started baking during the pandemic as a hobby — and before long I was making cakes for friends and family for birthdays and special occasions. Their joy and encouragement inspired me to share my passion with the wider community.<br><br>I love giving careful attention to each person's taste while using quality, healthier ingredients. I feel that handmade cakes are more personal and special in a way that store-bought ones simply can't match. I truly enjoy baking with purpose and creating something that brings joy to others. If you love handmade cakes as much as I do, shoot me a message and I'd love to bake for you! 🎂❤️</div>
     </div>
   </div>
 
   <div class="cta-section">
-    <div class="cta-sub">Ready to place an order?</div>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a class="wa-btn" href="https://wa.me/447983876598">
         <svg style="width:20px;height:20px;fill:#fff;flex-shrink:0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -196,21 +312,24 @@
 
 <script>
 const CONFIG = {
-  flavour:{label:'Flavour',side:'left',options:['Chocolate','Vanilla'],colors:['#6b3a1f','#f5e6b8'],dotColors:['#6b3a1f','#e8c84a']},
+  layers:{label:'Layers',side:'left',options:['1 layer','2 layers','3 layers'],dotColors:['#d4b070','#c8a060','#a87840']},
+  flavour:{label:'Flavour',side:'left',options:['Chocolate','Vanilla','Other'],colors:['#6b3a1f','#f5e6b8','#f0f0f0'],dotColors:['#6b3a1f','#e8c84a','#bbb']},
   base:{label:'Base',side:'left',options:['Chiffon','Gluten free','Sponge'],dotColors:['#c8a060','#8ab048','#e0a840'],textures:['chiffon','glutenfree','sponge']},
-  frosting:{label:'Frosting',side:'right',options:['Cream cheese','Mascarpone'],colors:['#fadadd','#fffae0'],dotColors:['#e8b0b8','#d4c060']},
-  topping:{label:'Topping',side:'right',options:['Strawberry','Blueberry','Mango','Raspberry','None'],colors:['#e05070','#7060c0','#f0a020','#c03060','transparent'],dotColors:['#e05070','#7060c0','#f0a020','#c03060','#ccc']},
-  jam:{label:'Jam layer',side:'right',options:['None','Strawberry','Mango'],colors:['none','#e8607a','#f0a020'],dotColors:['#ccc','#e8607a','#f0a020']}
+  frosting:{label:'Frosting',side:'right',options:['Cream cheese','Mascarpone','Other'],colors:['#fadadd','#fffae0','#f0f0f0'],dotColors:['#e8b0b8','#d4c060','#bbb']},
+  topping:{label:'Topping',side:'right',options:['Strawberry','Blueberry','Mango','Raspberry','None','Other'],colors:['#e05070','#7060c0','#f0a020','#c03060','transparent','#f0f0f0'],dotColors:['#e05070','#7060c0','#f0a020','#c03060','#ccc','#bbb']},
+  jam:{label:'Jam layer',side:'right',options:['None','Strawberry','Mango','Other'],colors:['none','#e8607a','#f0a020','#f0f0f0'],dotColors:['#ccc','#e8607a','#f0a020','#bbb']}
 };
-const state={flavour:0,base:0,frosting:0,topping:0,jam:0};
+const state={layers:0,flavour:0,base:0,frosting:0,topping:0,jam:0};
 
 function cycle(key,dir){const opts=CONFIG[key].options;state[key]=(state[key]+opts.length+dir)%opts.length;render();}
 
 function buildControls(){
   const left=document.getElementById('leftCol'),right=document.getElementById('rightCol');
   Object.entries(CONFIG).forEach(([key,cfg])=>{
-    const g=document.createElement('div');g.className='option-group';
-    g.innerHTML=`<div class="opt-label">${cfg.label}</div><div class="opt-pill"><span class="dot-swatch" id="dot-${key}"></span><span class="val-text" id="val-${key}"></span><div class="arrow-btns"><button class="arr" onclick="cycle('${key}',-1)" aria-label="Previous">&#8592;</button><button class="arr" onclick="cycle('${key}',1)" aria-label="Next">&#8594;</button></div></div>`;
+    const g=document.createElement('div');g.className='option-group';g.id='group-'+key;
+    const hasOther=cfg.options.includes('Other');
+    const otherInput=hasOther?`<input class="other-input" id="other-${key}" type="text" placeholder="Please specify..." style="display:none;" oninput="render()"/>`:'';
+    g.innerHTML=`<div class="opt-label">${cfg.label}</div><div class="opt-pill"><span class="dot-swatch" id="dot-${key}"></span><span class="val-text" id="val-${key}"></span><div class="arrow-btns"><button class="arr" onclick="cycle('${key}',-1)" aria-label="Previous">&#8592;</button><button class="arr" onclick="cycle('${key}',1)" aria-label="Next">&#8594;</button></div></div>${otherInput}`;
     (cfg.side==='left'?left:right).appendChild(g);
   });
 }
@@ -222,36 +341,152 @@ function darken(hex){if(!hex||hex==='none')return '#000';return `rgb(${Math.max(
 function drawCake(){
   const svg=document.getElementById('cakeSvg');
   const CX=80,CW=124,lx=CX-CW/2;
-  const SPONGE_H=80,FROSTING_H=14,TOPPING_H=16,JAM_H=8,CANDLE_H=22;
-  const flavourColor=CONFIG.flavour.colors[state.flavour];
+  const numLayers=state.layers+1; // 1,2,3
+  const TOTAL_SPONGE_H=numLayers===1?70:numLayers===2?80:90;
+  const LAYER_H=Math.floor(TOTAL_SPONGE_H/numLayers);
+  const JAM_H=6,FROSTING_H=13,TOPPING_H=16,CANDLE_H=22;
+  const flavourColor=CONFIG.flavour.colors[state.flavour]||'#6b3a1f';
   const frostingColor=CONFIG.frosting.colors[state.frosting];
   const toppingColor=CONFIG.topping.colors[state.topping];
   const jamColor=CONFIG.jam.colors[state.jam];
-  const hasJam=state.jam!==0,hasTopping=state.topping!==4;
+  const hasJam=state.jam!==0&&state.layers!==0;
+  const hasTopping=state.topping!==4&&state.topping!==5;
   const textureName=CONFIG.base.textures[state.base];
   let parts=[],defs=[];
   const pid='pat_'+textureName+'_'+state.flavour;
   if(textureName==='chiffon'){defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="12" height="12"><rect width="12" height="12" fill="${flavourColor}"/><circle cx="6" cy="6" r="2.5" fill="${adjustAlpha(flavourColor,0.28)}"/></pattern>`);}
   else if(textureName==='glutenfree'){defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="${flavourColor}"/><line x1="0" y1="5" x2="10" y2="5" stroke="${adjustAlpha(flavourColor,0.35)}" stroke-width="1.5"/><line x1="5" y1="0" x2="5" y2="10" stroke="${adjustAlpha(flavourColor,0.35)}" stroke-width="1.5"/></pattern>`);}
   else{defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="16" height="8"><rect width="16" height="8" fill="${flavourColor}"/><line x1="0" y1="0" x2="16" y2="0" stroke="${adjustAlpha(flavourColor,0.28)}" stroke-width="1"/><line x1="0" y1="4" x2="16" y2="4" stroke="${adjustAlpha(flavourColor,0.18)}" stroke-width="0.5"/></pattern>`);}
-  svg.setAttribute('viewBox','0 0 160 220');svg.style.height='220px';
-  let y=190;
+
+  const totalH=TOTAL_SPONGE_H+(numLayers-1)*(hasJam?JAM_H:0)+FROSTING_H+(hasTopping?TOPPING_H:0)+CANDLE_H+30;
+  const viewH=Math.max(220,totalH+20);
+  svg.setAttribute('viewBox',`0 0 160 ${viewH}`);svg.style.height=viewH+'px';
+
+  let y=viewH-20;
+  // plate
   parts.push(`<rect x="${lx-12}" y="${y}" width="${CW+24}" height="8" rx="3" fill="#d8d8d8"/>`);
-  const spongeTop=y-SPONGE_H;
-  defs.push(`<clipPath id="sclip"><rect x="${lx}" y="${spongeTop}" width="${CW}" height="${SPONGE_H}" rx="4"/></clipPath>`);
-  parts.push(`<rect x="${lx}" y="${spongeTop}" width="${CW}" height="${SPONGE_H}" rx="4" fill="url(#${pid})" stroke="#00000012" stroke-width="0.5"/>`);
-  if(hasJam){const jamY=spongeTop+SPONGE_H/2-JAM_H/2;parts.push(`<rect x="${lx}" y="${jamY}" width="${CW}" height="${JAM_H}" fill="${jamColor}" clip-path="url(#sclip)"/><rect x="${lx}" y="${jamY}" width="${CW}" height="1.5" fill="${lighten(jamColor)}" opacity="0.5" clip-path="url(#sclip)"/><rect x="${lx}" y="${jamY+JAM_H-1.5}" width="${CW}" height="1.5" fill="${darken(jamColor)}" opacity="0.4" clip-path="url(#sclip)"/><line x1="${lx}" y1="${jamY}" x2="${lx+CW}" y2="${jamY}" stroke="#00000020" stroke-width="0.5"/><line x1="${lx}" y1="${jamY+JAM_H}" x2="${lx+CW}" y2="${jamY+JAM_H}" stroke="#00000020" stroke-width="0.5"/>`);}
-  parts.push(`<rect x="${lx}" y="${spongeTop}" width="${CW}" height="${SPONGE_H}" rx="4" fill="none" stroke="#00000018" stroke-width="0.5"/>`);
-  y=spongeTop;
+  y-=2;
+
+  // draw layers bottom to top
+  for(let i=numLayers-1;i>=0;i--){
+    const layerTop=y-LAYER_H;
+    defs.push(`<clipPath id="sclip${i}"><rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3"/></clipPath>`);
+    parts.push(`<rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3" fill="url(#${pid})" stroke="#00000012" stroke-width="0.5"/>`);
+    // jam stripe inside this layer (not on top layer, between layers)
+    if(hasJam&&i<numLayers-1){
+      const jamY=layerTop+LAYER_H-JAM_H/2;
+      parts.push(`<rect x="${lx}" y="${jamY}" width="${CW}" height="${JAM_H}" fill="${jamColor}" clip-path="url(#sclip${i})"/>`);
+      parts.push(`<rect x="${lx}" y="${jamY}" width="${CW}" height="1.5" fill="${lighten(jamColor)}" opacity="0.5" clip-path="url(#sclip${i})"/>`);
+      parts.push(`<line x1="${lx}" y1="${jamY}" x2="${lx+CW}" y2="${jamY}" stroke="#00000020" stroke-width="0.5"/>`);
+    }
+    parts.push(`<rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3" fill="none" stroke="#00000018" stroke-width="0.5"/>`);
+    y=layerTop;
+    // jam separator between layers
+    if(hasJam&&i>0){
+      parts.push(`<rect x="${lx-3}" y="${y-JAM_H}" width="${CW+6}" height="${JAM_H}" fill="${jamColor}" stroke="#00000010" stroke-width="0.5"/>`);
+      parts.push(`<rect x="${lx-3}" y="${y-JAM_H}" width="${CW+6}" height="1.5" fill="${lighten(jamColor)}" opacity="0.4"/>`);
+      y-=JAM_H;
+    }
+  }
+
+  // frosting
   parts.push(`<rect x="${lx-5}" y="${y-FROSTING_H}" width="${CW+10}" height="${FROSTING_H}" rx="3" fill="${frostingColor}" stroke="#00000012" stroke-width="0.5"/>`);
   y-=FROSTING_H;
+  // toppings
   if(hasTopping){const spacing=CW/8;for(let i=0;i<8;i++){const tx=lx+spacing/2+i*spacing;if(state.topping===2){parts.push(`<rect x="${tx-4}" y="${y-TOPPING_H+3}" width="8" height="10" rx="2" fill="${toppingColor}" opacity="0.92"/>`);}else{parts.push(`<circle cx="${tx}" cy="${y-TOPPING_H/2}" r="5" fill="${toppingColor}" opacity="0.92"/>`);}}y-=TOPPING_H;}
+  // candle
   parts.push(`<rect x="${CX-2.5}" y="${y-CANDLE_H}" width="5" height="${CANDLE_H}" rx="1.5" fill="#f0e0b8"/><ellipse cx="${CX}" cy="${y-CANDLE_H}" rx="3" ry="4" fill="#ffd060"/><ellipse cx="${CX}" cy="${y-CANDLE_H-3}" rx="1.5" ry="2" fill="#ff8020"/>`);
   svg.innerHTML=`<defs>${defs.join('')}</defs>${parts.join('')}`;
 }
 
-function updatePills(){Object.entries(CONFIG).forEach(([key,cfg])=>{const idx=state[key],v=document.getElementById('val-'+key),d=document.getElementById('dot-'+key);if(v)v.textContent=cfg.options[idx];if(d)d.style.background=cfg.dotColors[idx];});}
-function updateSummary(){document.getElementById('summaryChips').innerHTML=Object.entries(CONFIG).map(([key,cfg])=>{const idx=state[key];if(key==='jam'&&idx===0)return '';if(key==='topping'&&idx===4)return '';return `<div class="chip"><span class="chip-dot" style="background:${cfg.dotColors[idx]}"></span>${cfg.options[idx]} ${cfg.label.toLowerCase()}</div>`;}).filter(Boolean).join('');}
+function updatePills(){
+  Object.entries(CONFIG).forEach(([key,cfg])=>{
+    const idx=state[key],v=document.getElementById('val-'+key),d=document.getElementById('dot-'+key),o=document.getElementById('other-'+key);
+    if(v)v.textContent=cfg.options[idx];
+    if(d)d.style.background=cfg.dotColors[idx];
+    if(o)o.style.display=cfg.options[idx]==='Other'?'block':'none';
+  });
+  // hide jam when single layer
+  const jamGroup=document.getElementById('group-jam');
+  if(jamGroup) jamGroup.style.display=state.layers===0?'none':'flex';
+}
+function updateSummary(){
+  document.getElementById('summaryChips').innerHTML=Object.entries(CONFIG).map(([key,cfg])=>{
+    const idx=state[key];
+    if(key==='jam'&&(idx===0||state.layers===0))return '';
+    if(key==='topping'&&idx===4)return '';
+    return `<div class="chip"><span class="chip-dot" style="background:${cfg.dotColors[idx]}"></span>${cfg.options[idx]} ${cfg.label.toLowerCase()}</div>`;
+  }).filter(Boolean).join('');
+}
 function render(){updatePills();drawCake();updateSummary();}
 buildControls();render();
+
+// ---- Community comments (persistent storage) ----
+async function loadComments(){
+  const list=document.getElementById('commentsList');
+  try{
+    const res=await window.storage.get('yjbakes-comments',true);
+    const comments=res?JSON.parse(res.value):[];
+    renderComments(comments);
+  }catch(e){renderComments([]);}
+}
+
+function renderComments(comments){
+  const list=document.getElementById('commentsList');
+  if(!comments.length){list.innerHTML='<div class="no-comments">Be the first to share your love of cake! 🎂</div>';return;}
+  list.innerHTML=comments.slice().reverse().map(c=>{
+    const initials=c.name.trim().split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'?';
+    return `<div class="comment-card">
+      <div class="comment-header">
+        <div class="comment-avatar">${initials}</div>
+        <div class="comment-name">${escHtml(c.name)}</div>
+        ${c.fav?`<div class="comment-fav">🎂 ${escHtml(c.fav)}</div>`:''}
+      </div>
+      ${c.text?`<div class="comment-text">${escHtml(c.text)}</div>`:''}
+    </div>`;
+  }).join('');
+}
+
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+async function submitComment(){
+  const name=document.getElementById('commName').value.trim();
+  const fav=document.getElementById('commFav').value.trim();
+  const text=document.getElementById('commText').value.trim();
+  if(!name){alert('Please enter your name!');return;}
+  if(!fav&&!text){alert('Please share something — your favourite cake or a thought!');return;}
+  const btn=document.querySelector('.comm-submit');
+  btn.textContent='Saving…';btn.disabled=true;
+  try{
+    let comments=[];
+    try{const res=await window.storage.get('yjbakes-comments',true);if(res)comments=JSON.parse(res.value);}catch(e){}
+    comments.push({name,fav,text,ts:Date.now()});
+    await window.storage.set('yjbakes-comments',JSON.stringify(comments),true);
+    renderComments(comments);
+    document.getElementById('commName').value='';
+    document.getElementById('commFav').value='';
+    document.getElementById('commText').value='';
+  }catch(e){alert('Could not save — please try again.');}
+  btn.textContent='Share ❤️';btn.disabled=false;
+}
+loadComments();
+
+// Instagram embed — note: due to browser privacy restrictions, direct Instagram API
+// access requires authentication. The grid links to the profile instead.
+(function(){
+  const grid=document.getElementById('igGrid');
+  grid.innerHTML=`
+    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;">
+      <div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c13584" stroke="none"/></svg>
+        <span style="font-size:10px;color:#c13584;letter-spacing:0.5px;">@_yjbakes</span>
+      </div>
+    </a>
+    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
+    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
+    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
+    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
+    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
+  `;
+})();
 </script>
