@@ -1,103 +1,115 @@
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-.page{background:#fff;color:#111;font-family:var(--font-sans,system-ui,sans-serif);padding:0 0 48px;}
-.hero{text-align:center;padding:48px 24px 32px;border-bottom:1px solid #e8e8e8;}
-.hero h1{font-size:32px;font-weight:500;letter-spacing:-0.5px;color:#111;}
-.hero-sub{font-size:14px;color:#e05080;margin-top:8px;letter-spacing:1px;display:flex;align-items:center;justify-content:center;gap:6px;}
-.sec-label{font-size:11px;font-weight:500;letter-spacing:2px;color:#aaa;text-transform:uppercase;text-align:center;padding:36px 0 20px;}
-.builder{display:grid;grid-template-columns:190px 1fr 190px;gap:0;max-width:680px;margin:0 auto;align-items:center;padding:0 16px;}
-.options-col{display:flex;flex-direction:column;gap:20px;}
-.option-group{display:flex;flex-direction:column;gap:6px;}
-.opt-label{font-size:10px;font-weight:500;letter-spacing:1.5px;color:#bbb;margin-bottom:2px;}
-.opt-pill{display:flex;align-items:center;border:1px solid #e0e0e0;border-radius:100px;padding:6px 8px;font-size:12px;color:#444;background:#fff;}
-.dot-swatch{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-right:6px;}
-.val-text{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.arrow-btns{display:flex;gap:4px;margin-left:6px;flex-shrink:0;}
-.arr{width:20px;height:20px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;font-size:10px;display:flex;align-items:center;justify-content:center;color:#555;transition:background .1s;}
-.arr:hover{background:#f0f0f0;}
-.cake-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;}
-.summary-box{background:#fafafa;border:1px solid #e8e8e8;border-radius:12px;padding:16px 20px;margin:20px auto 0;max-width:500px;}
-.summary-title{font-size:10px;font-weight:500;letter-spacing:1.5px;color:#bbb;margin-bottom:10px;}
-.summary-chips{display:flex;flex-wrap:wrap;gap:6px;}
-.chip{display:inline-flex;align-items:center;gap:5px;background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:4px 10px;font-size:12px;color:#333;}
-.chip-dot{width:8px;height:8px;border-radius:50%;}
-.divider{height:1px;background:#f0f0f0;margin:36px 24px 0;}
-.showcase{padding:0 24px;}
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;max-width:680px;margin:0 auto;}
-.p-card{border:1px solid #e8e8e8;border-radius:12px;padding:16px 12px;text-align:center;background:#fff;}
-.p-card svg{display:block;margin:0 auto 10px;}
-.p-name{font-size:12px;font-weight:500;color:#111;margin-bottom:4px;}
-.p-tag{font-size:10px;color:#aaa;letter-spacing:0.5px;}
-.about-section{max-width:600px;margin:0 auto;padding:0 24px;}
-.about-inner{display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px;border:1px solid #e8e8e8;border-radius:12px;text-align:center;}
-.avatar{width:56px;height:56px;border-radius:50%;background:#f0f0f0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#888;}
-.bio-text{font-size:13px;color:#555;line-height:1.8;}
-.bio-name{font-size:16px;font-weight:500;color:#111;margin-bottom:6px;}
-.other-input{width:100%;margin-top:6px;border:1px solid #e0e0e0;border-radius:8px;padding:6px 10px;font-size:12px;color:#444;outline:none;font-family:inherit;}
-.other-input:focus{border-color:#bbb;}
-.notes-area{width:100%;margin-top:10px;border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;font-size:12px;color:#444;resize:vertical;min-height:70px;font-family:inherit;outline:none;line-height:1.6;}
-.notes-area:focus{border-color:#bbb;}
-.ig-section{max-width:680px;margin:0 auto;padding:0 24px;}
-.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
-.ig-tile{aspect-ratio:1;border-radius:10px;overflow:hidden;background:#f5f5f5;display:flex;align-items:center;justify-content:center;}
-.ig-tile img{width:100%;height:100%;object-fit:cover;display:block;}
-.ig-tile-placeholder{display:flex;flex-direction:column;align-items:center;gap:6px;color:#ccc;}
+body{-webkit-text-size-adjust:100%;}
+.page{background:#fff;color:#111;font-family:system-ui,-apple-system,sans-serif;padding:0 0 56px;max-width:100vw;overflow-x:hidden;}
+
+/* Hero */
+.hero{text-align:center;padding:40px 20px 28px;border-bottom:1px solid #e8e8e8;}
+.hero h1{font-size:28px;font-weight:500;letter-spacing:-0.5px;color:#111;}
+.hero-sub{font-size:13px;color:#e05080;margin-top:8px;letter-spacing:1px;display:flex;align-items:center;justify-content:center;gap:6px;}
+
+/* Section labels */
+.sec-label{font-size:10px;font-weight:600;letter-spacing:2px;color:#aaa;text-transform:uppercase;text-align:center;padding:32px 0 18px;}
+.divider{height:1px;background:#f0f0f0;margin:32px 20px 0;}
+
+/* Builder — stacked on mobile, 3-col on wide screens */
+.builder{display:flex;flex-direction:column;gap:0;max-width:680px;margin:0 auto;padding:0 16px;}
+.builder-cols{display:flex;gap:8px;justify-content:space-between;}
+.options-col{display:flex;flex-direction:column;gap:14px;flex:1;}
+.cake-center{display:flex;justify-content:center;padding:12px 0;}
+.option-group{display:flex;flex-direction:column;gap:4px;}
+.opt-label{font-size:9px;font-weight:600;letter-spacing:1.5px;color:#bbb;margin-bottom:1px;}
+.opt-pill{display:flex;align-items:center;border:1px solid #e0e0e0;border-radius:100px;padding:5px 7px;font-size:11px;color:#444;background:#fff;}
+.dot-swatch{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-right:5px;}
+.val-text{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;}
+.arrow-btns{display:flex;gap:3px;margin-left:4px;flex-shrink:0;}
+.arr{width:22px;height:22px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center;color:#555;-webkit-tap-highlight-color:transparent;}
+.arr:active{background:#f0f0f0;}
+.other-input{width:100%;margin-top:5px;border:1px solid #e0e0e0;border-radius:8px;padding:6px 9px;font-size:12px;color:#444;outline:none;font-family:inherit;}
+
+/* Summary */
+.summary-box{background:#fafafa;border:1px solid #e8e8e8;border-radius:12px;padding:14px 16px;margin:16px auto 0;max-width:600px;width:calc(100% - 32px);}
+.summary-title{font-size:9px;font-weight:600;letter-spacing:1.5px;color:#bbb;margin-bottom:8px;}
+.summary-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.chip{display:inline-flex;align-items:center;gap:4px;background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:3px 9px;font-size:11px;color:#333;}
+.chip-dot{width:7px;height:7px;border-radius:50%;}
+.notes-area{width:100%;margin-top:10px;border:1px solid #e0e0e0;border-radius:8px;padding:9px 11px;font-size:13px;color:#444;resize:vertical;min-height:68px;font-family:inherit;outline:none;line-height:1.6;}
+
+/* Top bakes */
+.showcase{padding:0 16px;}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:680px;margin:0 auto;}
+@media(min-width:480px){.product-grid{grid-template-columns:repeat(5,1fr);}}
+.p-card{border:1px solid #e8e8e8;border-radius:12px;padding:14px 8px;text-align:center;background:#fff;}
+.p-card svg{display:block;margin:0 auto 8px;}
+.p-name{font-size:11px;font-weight:500;color:#111;margin-bottom:3px;line-height:1.3;}
+.p-tag{font-size:9px;color:#aaa;letter-spacing:0.3px;line-height:1.4;}
+
+/* Instagram gallery */
+.ig-section{max-width:680px;margin:0 auto;padding:0 16px;}
+.ig-embed-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+@media(min-width:520px){.ig-embed-grid{grid-template-columns:repeat(3,1fr);}}
 .ig-follow{text-align:center;margin-top:14px;font-size:12px;color:#888;}
 .ig-follow a{color:#c13584;text-decoration:none;font-weight:500;}
-/* Info / Good to know section */
-.info-section{max-width:600px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:12px;}
-.info-card{display:flex;gap:16px;align-items:flex-start;background:#fafafa;border:1px solid #f0f0f0;border-radius:12px;padding:18px 20px;}
-.info-icon{font-size:22px;flex-shrink:0;margin-top:1px;}
+
+/* Info / Good to know */
+.info-section{max-width:600px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:10px;}
+.info-card{display:flex;gap:14px;align-items:flex-start;background:#fafafa;border:1px solid #f0f0f0;border-radius:12px;padding:16px;}
+.info-icon{font-size:20px;flex-shrink:0;margin-top:1px;}
 .info-body{flex:1;}
-.info-title{font-size:13px;font-weight:600;color:#111;margin-bottom:5px;}
+.info-title{font-size:13px;font-weight:600;color:#111;margin-bottom:4px;}
 .info-text{font-size:13px;color:#555;line-height:1.75;}
 .info-text strong{color:#333;font-weight:600;}
-.wa-btn{display:inline-flex;align-items:center;gap:10px;background:#111;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;}
-.wa-btn:hover{background:#333;}
-.cta-section{text-align:center;padding:36px 24px 0;}
-.footer{text-align:center;font-size:11px;color:#ccc;padding:32px 24px 16px;letter-spacing:0.5px;}
-/* Community section */
-.community-section{max-width:600px;margin:0 auto;padding:0 24px;}
-.community-inner{border:1px solid #e8e8e8;border-radius:12px;padding:24px;}
-.community-form{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
-.comm-input{border:1px solid #e0e0e0;border-radius:8px;padding:9px 12px;font-size:13px;color:#444;font-family:inherit;outline:none;}
-.comm-input:focus{border-color:#bbb;}
-.comm-textarea{border:1px solid #e0e0e0;border-radius:8px;padding:9px 12px;font-size:13px;color:#444;font-family:inherit;outline:none;resize:vertical;min-height:72px;line-height:1.6;}
-.comm-textarea:focus{border-color:#bbb;}
-.comm-row{display:flex;gap:8px;}
-.comm-fav{flex:1;}
-.comm-submit{background:#111;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;align-self:flex-end;}
-.comm-submit:hover{background:#333;}
-.comments-list{display:flex;flex-direction:column;gap:14px;}
-.comment-card{background:#fafafa;border:1px solid #f0f0f0;border-radius:10px;padding:14px 16px;}
-.comment-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
-.comment-avatar{width:30px;height:30px;border-radius:50%;background:#fadadd;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#c05070;flex-shrink:0;}
-.comment-name{font-size:13px;font-weight:500;color:#111;}
-.comment-fav{font-size:11px;color:#e05080;background:#fff0f4;border-radius:100px;padding:2px 8px;margin-left:auto;}
-.comment-text{font-size:12px;color:#666;line-height:1.7;}
-.no-comments{font-size:13px;color:#bbb;text-align:center;padding:16px 0;}
 
+/* About */
+.about-section{max-width:600px;margin:0 auto;padding:0 16px;}
+.about-inner{display:flex;flex-direction:column;align-items:center;gap:14px;padding:20px;border:1px solid #e8e8e8;border-radius:12px;text-align:center;}
+.avatar{width:56px;height:56px;border-radius:50%;background:#f0f0f0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#888;}
+.bio-name{font-size:16px;font-weight:500;color:#111;}
+.bio-text{font-size:13px;color:#555;line-height:1.85;}
+
+/* CTA buttons */
+.cta-section{text-align:center;padding:32px 16px 0;}
+.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.wa-btn{display:inline-flex;align-items:center;gap:9px;background:#111;color:#fff;border:none;border-radius:10px;padding:14px 22px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;-webkit-tap-highlight-color:transparent;}
+.wa-btn:active{opacity:0.85;}
+
+.footer{text-align:center;font-size:11px;color:#ccc;padding:32px 20px 16px;letter-spacing:0.5px;}
+
+/* Wide screen builder */
+@media(min-width:600px){
+  .builder{flex-direction:row;align-items:center;padding:0 16px;}
+  .builder-cols{flex-direction:column;gap:14px;flex:none;width:190px;}
+  .cake-center{flex:1;padding:16px 8px;}
+  .options-col{gap:20px;}
+}
 </style>
 
 <div class="page">
   <div class="hero">
     <h1>YJbakes</h1>
     <div class="hero-sub">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#e05080"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#e05080"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
       Handmade with love
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#e05080"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#e05080"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
     </div>
   </div>
 
   <div class="sec-label">Build your cake</div>
-  <div class="builder">
-    <div class="options-col" id="leftCol"></div>
-    <div class="cake-center">
-      <svg id="cakeSvg" xmlns="http://www.w3.org/2000/svg" style="width:160px;display:block;overflow:visible;"></svg>
+
+  <!-- Mobile: left col, cake, right col stacked; Desktop: 3-col -->
+  <div class="builder" id="builderWrap">
+    <div class="builder-cols" id="leftWrap">
+      <div class="options-col" id="leftCol"></div>
     </div>
-    <div class="options-col" id="rightCol"></div>
+    <div class="cake-center">
+      <svg id="cakeSvg" xmlns="http://www.w3.org/2000/svg" style="width:140px;display:block;overflow:visible;"></svg>
+    </div>
+    <div class="builder-cols" id="rightWrap">
+      <div class="options-col" id="rightCol"></div>
+    </div>
   </div>
+
   <div class="summary-box">
     <div class="summary-title">Your selection</div>
     <div class="summary-chips" id="summaryChips"></div>
@@ -108,98 +120,26 @@
   <div class="sec-label">Top bakes</div>
   <div class="showcase">
     <div class="product-grid">
-
-      <!-- Celebration layer cake -->
       <div class="p-card">
-        <svg width="80" height="90" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="74" width="64" height="8" rx="3" fill="#d8d8d8"/>
-          <rect x="12" y="62" width="56" height="14" rx="3" fill="#6b3a1f" stroke="#4a2810" stroke-width="0.5"/>
-          <rect x="10" y="58" width="60" height="6" rx="2" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <rect x="12" y="44" width="56" height="16" rx="2" fill="#f5e6b8" stroke="#d4c080" stroke-width="0.5"/>
-          <rect x="10" y="40" width="60" height="6" rx="2" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <rect x="12" y="28" width="56" height="14" rx="3" fill="#6b3a1f" stroke="#4a2810" stroke-width="0.5"/>
-          <rect x="10" y="24" width="60" height="6" rx="2" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <circle cx="24" cy="20" r="3" fill="#ffd060"/><circle cx="40" cy="18" r="3" fill="#ffd060"/><circle cx="56" cy="20" r="3" fill="#ffd060"/>
-          <rect x="38" y="10" width="4" height="10" rx="1" fill="#f0e0b8"/>
-          <ellipse cx="40" cy="10" rx="2.5" ry="3.5" fill="#ffd060"/>
-          <ellipse cx="40" cy="8" rx="1.5" ry="1.5" fill="#ff8020"/>
-        </svg>
-        <div class="p-name">Celebration layer cake</div>
-        <div class="p-tag">Bestseller · Custom orders</div>
+        <svg width="60" height="70" viewBox="0 0 80 90"><rect x="8" y="74" width="64" height="8" rx="3" fill="#d8d8d8"/><rect x="12" y="62" width="56" height="14" rx="3" fill="#6b3a1f" stroke="#4a2810" stroke-width="0.5"/><rect x="10" y="58" width="60" height="6" rx="2" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><rect x="12" y="44" width="56" height="16" rx="2" fill="#f5e6b8" stroke="#d4c080" stroke-width="0.5"/><rect x="10" y="40" width="60" height="6" rx="2" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><rect x="12" y="28" width="56" height="14" rx="3" fill="#6b3a1f" stroke="#4a2810" stroke-width="0.5"/><rect x="10" y="24" width="60" height="6" rx="2" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><circle cx="24" cy="20" r="3" fill="#ffd060"/><circle cx="40" cy="18" r="3" fill="#ffd060"/><circle cx="56" cy="20" r="3" fill="#ffd060"/><rect x="38" y="10" width="4" height="10" rx="1" fill="#f0e0b8"/><ellipse cx="40" cy="10" rx="2.5" ry="3.5" fill="#ffd060"/><ellipse cx="40" cy="8" rx="1.5" ry="1.5" fill="#ff8020"/></svg>
+        <div class="p-name">Celebration layer cake</div><div class="p-tag">Bestseller · Custom orders</div>
       </div>
-
-      <!-- Square cake -->
       <div class="p-card">
-        <svg width="80" height="90" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="72" width="60" height="7" rx="2" fill="#d8d8d8"/>
-          <rect x="14" y="40" width="52" height="34" fill="#6b3a1f" stroke="#4a2810" stroke-width="0.5"/>
-          <rect x="14" y="40" width="52" height="8" fill="#8a4a28"/>
-          <rect x="10" y="34" width="60" height="8" rx="1" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <rect x="14" y="28" width="52" height="8" rx="1" fill="#e87090" stroke="#d05070" stroke-width="0.5"/>
-          <rect x="18" y="20" width="44" height="10" rx="1" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <line x1="14" y1="54" x2="66" y2="54" stroke="#4a2810" stroke-width="0.5" stroke-dasharray="4,3"/>
-          <circle cx="27" cy="16" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/>
-          <circle cx="40" cy="14" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/>
-          <circle cx="53" cy="16" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/>
-        </svg>
-        <div class="p-name">Square cake</div>
-        <div class="p-tag">Custom orders</div>
+        <svg width="60" height="70" viewBox="0 0 80 90"><rect x="10" y="72" width="60" height="7" rx="2" fill="#d8d8d8"/><rect x="14" y="40" width="52" height="34" fill="#6b3a1f" stroke="#4a2810" stroke-width="0.5"/><rect x="14" y="40" width="52" height="8" fill="#8a4a28"/><rect x="10" y="34" width="60" height="8" rx="1" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><rect x="14" y="28" width="52" height="8" rx="1" fill="#e87090" stroke="#d05070" stroke-width="0.5"/><rect x="18" y="20" width="44" height="10" rx="1" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><line x1="14" y1="54" x2="66" y2="54" stroke="#4a2810" stroke-width="0.5" stroke-dasharray="4,3"/><circle cx="27" cy="16" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/><circle cx="40" cy="14" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/><circle cx="53" cy="16" r="4" fill="#e05070" stroke="#c03050" stroke-width="0.5"/></svg>
+        <div class="p-name">Square cake</div><div class="p-tag">Custom orders</div>
       </div>
-
-      <!-- Muffins / cupcakes -->
       <div class="p-card">
-        <svg width="80" height="90" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="76" width="64" height="6" rx="2" fill="#d8d8d8"/>
-          <rect x="10" y="58" width="26" height="20" rx="3" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/>
-          <rect x="12" y="62" width="6" height="10" fill="#d4b070"/><rect x="20" y="62" width="6" height="10" fill="#d4b070"/>
-          <ellipse cx="23" cy="58" rx="14" ry="6" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <ellipse cx="23" cy="52" rx="10" ry="8" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/>
-          <circle cx="19" cy="50" r="2" fill="#e05070"/><circle cx="27" cy="51" r="2" fill="#e05070"/><circle cx="23" cy="47" r="2" fill="#e05070"/>
-          <rect x="44" y="58" width="26" height="20" rx="3" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/>
-          <rect x="46" y="62" width="6" height="10" fill="#d4b070"/><rect x="54" y="62" width="6" height="10" fill="#d4b070"/>
-          <ellipse cx="57" cy="58" rx="14" ry="6" fill="#fffae0" stroke="#d4c060" stroke-width="0.5"/>
-          <ellipse cx="57" cy="52" rx="10" ry="8" fill="#fffae0" stroke="#d4c060" stroke-width="0.5"/>
-          <circle cx="53" cy="50" r="2" fill="#f0a020"/><circle cx="61" cy="51" r="2" fill="#f0a020"/><circle cx="57" cy="47" r="2" fill="#7060c0"/>
-        </svg>
-        <div class="p-name">Muffins &amp; cupcakes</div>
-        <div class="p-tag">Other sweet things</div>
+        <svg width="60" height="70" viewBox="0 0 80 90"><rect x="8" y="76" width="64" height="6" rx="2" fill="#d8d8d8"/><rect x="10" y="58" width="26" height="20" rx="3" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/><rect x="12" y="62" width="6" height="10" fill="#d4b070"/><rect x="20" y="62" width="6" height="10" fill="#d4b070"/><ellipse cx="23" cy="58" rx="14" ry="6" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><ellipse cx="23" cy="52" rx="10" ry="8" fill="#fadadd" stroke="#e8b0b8" stroke-width="0.5"/><circle cx="19" cy="50" r="2" fill="#e05070"/><circle cx="27" cy="51" r="2" fill="#e05070"/><circle cx="23" cy="47" r="2" fill="#e05070"/><rect x="44" y="58" width="26" height="20" rx="3" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/><rect x="46" y="62" width="6" height="10" fill="#d4b070"/><rect x="54" y="62" width="6" height="10" fill="#d4b070"/><ellipse cx="57" cy="58" rx="14" ry="6" fill="#fffae0" stroke="#d4c060" stroke-width="0.5"/><ellipse cx="57" cy="52" rx="10" ry="8" fill="#fffae0" stroke="#d4c060" stroke-width="0.5"/><circle cx="53" cy="50" r="2" fill="#f0a020"/><circle cx="61" cy="51" r="2" fill="#f0a020"/><circle cx="57" cy="47" r="2" fill="#7060c0"/></svg>
+        <div class="p-name">Muffins &amp; cupcakes</div><div class="p-tag">Other sweet things</div>
       </div>
-
-      <!-- Loaf -->
       <div class="p-card">
-        <svg width="80" height="90" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="74" width="64" height="7" rx="2" fill="#d8d8d8"/>
-          <rect x="10" y="50" width="60" height="26" rx="3" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/>
-          <ellipse cx="40" cy="50" rx="30" ry="12" fill="#d4b070" stroke="#a87840" stroke-width="0.5"/>
-          <ellipse cx="40" cy="42" rx="24" ry="10" fill="#e8c880" stroke="#c8a060" stroke-width="0.5"/>
-          <path d="M20 50 Q40 36 60 50" fill="none" stroke="#c8a060" stroke-width="1"/>
-          <rect x="16" y="60" width="12" height="14" rx="1" fill="#d4b070"/>
-          <rect x="34" y="60" width="12" height="14" rx="1" fill="#d4b070"/>
-          <rect x="52" y="60" width="12" height="14" rx="1" fill="#d4b070"/>
-          <line x1="28" y1="56" x2="28" y2="76" stroke="#a87840" stroke-width="0.5"/>
-          <line x1="46" y1="56" x2="46" y2="76" stroke="#a87840" stroke-width="0.5"/>
-        </svg>
-        <div class="p-name">Loaf</div>
-        <div class="p-tag">Homemade</div>
+        <svg width="60" height="70" viewBox="0 0 80 90"><rect x="8" y="74" width="64" height="7" rx="2" fill="#d8d8d8"/><rect x="10" y="50" width="60" height="26" rx="3" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/><ellipse cx="40" cy="50" rx="30" ry="12" fill="#d4b070" stroke="#a87840" stroke-width="0.5"/><ellipse cx="40" cy="42" rx="24" ry="10" fill="#e8c880" stroke="#c8a060" stroke-width="0.5"/><path d="M20 50 Q40 36 60 50" fill="none" stroke="#c8a060" stroke-width="1"/><rect x="16" y="60" width="12" height="14" rx="1" fill="#d4b070"/><rect x="34" y="60" width="12" height="14" rx="1" fill="#d4b070"/><rect x="52" y="60" width="12" height="14" rx="1" fill="#d4b070"/><line x1="28" y1="56" x2="28" y2="76" stroke="#a87840" stroke-width="0.5"/><line x1="46" y1="56" x2="46" y2="76" stroke="#a87840" stroke-width="0.5"/></svg>
+        <div class="p-name">Loaf</div><div class="p-tag">Homemade</div>
       </div>
-
-      <!-- Focaccia -->
       <div class="p-card">
-        <svg width="80" height="90" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="74" width="64" height="7" rx="2" fill="#d8d8d8"/>
-          <rect x="8" y="52" width="64" height="24" rx="4" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/>
-          <ellipse cx="40" cy="52" rx="32" ry="10" fill="#d4aa50" stroke="#a87840" stroke-width="0.5"/>
-          <ellipse cx="40" cy="46" rx="28" ry="8" fill="#e8c060" stroke="#c8a060" stroke-width="0.5"/>
-          <circle cx="26" cy="46" r="2.5" fill="#c89030"/><circle cx="36" cy="43" r="2.5" fill="#c89030"/><circle cx="46" cy="45" r="2.5" fill="#c89030"/><circle cx="55" cy="44" r="2.5" fill="#c89030"/>
-          <circle cx="30" cy="50" r="1.5" fill="#88aa40"/><circle cx="42" cy="48" r="1.5" fill="#88aa40"/><circle cx="52" cy="50" r="1.5" fill="#88aa40"/>
-          <ellipse cx="22" cy="44" rx="3" ry="1.5" fill="#e05030" opacity="0.8"/>
-          <ellipse cx="50" cy="42" rx="3" ry="1.5" fill="#e05030" opacity="0.8"/>
-          <ellipse cx="36" cy="50" rx="3" ry="1.5" fill="#e05030" opacity="0.8"/>
-        </svg>
-        <div class="p-name">Focaccia</div>
-        <div class="p-tag">Savoury</div>
+        <svg width="60" height="70" viewBox="0 0 80 90"><rect x="8" y="74" width="64" height="7" rx="2" fill="#d8d8d8"/><rect x="8" y="52" width="64" height="24" rx="4" fill="#c8a060" stroke="#a87840" stroke-width="0.5"/><ellipse cx="40" cy="52" rx="32" ry="10" fill="#d4aa50" stroke="#a87840" stroke-width="0.5"/><ellipse cx="40" cy="46" rx="28" ry="8" fill="#e8c060" stroke="#c8a060" stroke-width="0.5"/><circle cx="26" cy="46" r="2.5" fill="#c89030"/><circle cx="36" cy="43" r="2.5" fill="#c89030"/><circle cx="46" cy="45" r="2.5" fill="#c89030"/><circle cx="55" cy="44" r="2.5" fill="#c89030"/><circle cx="30" cy="50" r="1.5" fill="#88aa40"/><circle cx="42" cy="48" r="1.5" fill="#88aa40"/><circle cx="52" cy="50" r="1.5" fill="#88aa40"/><ellipse cx="22" cy="44" rx="3" ry="1.5" fill="#e05030" opacity="0.8"/><ellipse cx="50" cy="42" rx="3" ry="1.5" fill="#e05030" opacity="0.8"/><ellipse cx="36" cy="50" rx="3" ry="1.5" fill="#e05030" opacity="0.8"/></svg>
+        <div class="p-name">Focaccia</div><div class="p-tag">Savoury</div>
       </div>
-
     </div>
   </div>
 
@@ -207,102 +147,49 @@
   <div class="divider"></div>
   <div class="sec-label">From the kitchen</div>
   <div class="ig-section">
-    <div class="ig-grid" id="igGrid">
-      <!-- placeholders shown while loading -->
-      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
-      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
-      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
-      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
-      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
-      <div class="ig-tile"><div class="ig-tile-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></div>
+    <div class="ig-embed-grid">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYr4iNpIgrk/" data-instgrm-version="14" style="margin:0;min-width:0;width:100%;max-width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYr4Cb-iIJn/" data-instgrm-version="14" style="margin:0;min-width:0;width:100%;max-width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYr1-uojNV4/" data-instgrm-version="14" style="margin:0;min-width:0;width:100%;max-width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYr1w4zDBiA/" data-instgrm-version="14" style="margin:0;min-width:0;width:100%;max-width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYr1P61DBTK/" data-instgrm-version="14" style="margin:0;min-width:0;width:100%;max-width:100%;"></blockquote>
     </div>
-    <div class="ig-follow">See more on Instagram — <a href="https://instagram.com/_yjbakes" target="_blank">@_yjbakes</a></div>
+    <div class="ig-follow">Follow on Instagram — <a href="https://instagram.com/_yjbakes" target="_blank">@_yjbakes</a></div>
   </div>
+  <script async src="https://www.instagram.com/embed.js"></script>
 
-  <!-- Community section -->
-  <div class="divider"></div>
-  <div class="sec-label">Cake lovers 🎂</div>
-  <div class="community-section">
-    <div class="community-inner">
-      <div class="community-form">
-        <div class="comm-row">
-          <input class="comm-input comm-fav" id="commName" type="text" placeholder="Your name" maxlength="40"/>
-          <input class="comm-input comm-fav" id="commFav" type="text" placeholder="Favourite cake 🎂" maxlength="60"/>
-        </div>
-        <textarea class="comm-textarea" id="commText" placeholder="What do you love about cakes? Share a memory, a flavour, anything! 💬" maxlength="300"></textarea>
-        <button class="comm-submit" onclick="submitComment()">Share ❤️</button>
-      </div>
-      <div class="comments-list" id="commentsList">
-        <div class="no-comments">Be the first to share your love of cake!</div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Good to know -->
   <div class="divider"></div>
   <div class="sec-label">Good to know</div>
   <div class="info-section">
-
-    <!-- Pricing -->
-    <div class="info-card">
-      <div class="info-icon">💷</div>
-      <div class="info-body">
-        <div class="info-title">Pricing</div>
-        <div class="info-text">Cakes are priced between <strong>£20–£25</strong>. The base price starts at <strong>£20</strong> for a classic cake, and goes up to <strong>£25</strong> for layered cakes, vegan, gluten-free, or allergy-friendly options. Get in touch and I'll give you an exact quote based on your order.</div>
-      </div>
-    </div>
-
-    <!-- Packaging -->
-    <div class="info-card">
-      <div class="info-icon">📦</div>
-      <div class="info-body">
-        <div class="info-title">Packaging</div>
-        <div class="info-text">Every cake is carefully placed in a dedicated <strong>cake box</strong> to keep it secure and fresh. Your cake will arrive looking exactly as it should — ready to enjoy or present as a gift.</div>
-      </div>
-    </div>
-
-    <!-- Pre-order -->
-    <div class="info-card">
-      <div class="info-icon">📅</div>
-      <div class="info-body">
-        <div class="info-title">Pre-order only</div>
-        <div class="info-text">All cakes are made <strong>to order</strong> so they're as fresh as possible for you. Please get in touch in advance to place your order and we'll agree on a date that works for both of us.</div>
-      </div>
-    </div>
-
-    <!-- Delivery -->
-    <div class="info-card">
-      <div class="info-icon">🚗</div>
-      <div class="info-body">
-        <div class="info-title">Collection &amp; delivery</div>
-        <div class="info-text"><strong>Collection is free</strong> — just come pick it up! I also offer <strong>free delivery</strong> for nearby locations. For areas further away, a small delivery fee may apply depending on the distance. Message me and we can sort something out. 😊</div>
-      </div>
-    </div>
-
+    <div class="info-card"><div class="info-icon">💷</div><div class="info-body"><div class="info-title">Pricing</div><div class="info-text">Cakes are priced between <strong>£20–£25</strong>. The base price starts at <strong>£20</strong> for a classic cake, and goes up to <strong>£25</strong> for layered cakes, vegan, gluten-free, or allergy-friendly options. Get in touch and I'll give you an exact quote based on your order.</div></div></div>
+    <div class="info-card"><div class="info-icon">📦</div><div class="info-body"><div class="info-title">Packaging</div><div class="info-text">Every cake is carefully placed in a dedicated <strong>cake box</strong> to keep it secure and fresh. Your cake will arrive looking exactly as it should — ready to enjoy or present as a gift.</div></div></div>
+    <div class="info-card"><div class="info-icon">📅</div><div class="info-body"><div class="info-title">Pre-order only</div><div class="info-text">All cakes are made <strong>to order</strong> so they're as fresh as possible for you. Please get in touch in advance to place your order and we'll agree on a date that works for both of us.</div></div></div>
+    <div class="info-card"><div class="info-icon">🚗</div><div class="info-body"><div class="info-title">Collection &amp; delivery</div><div class="info-text"><strong>Collection is free</strong> — just come pick it up! I also offer <strong>free delivery</strong> for nearby locations. For areas further away, a small delivery fee may apply depending on the distance. Message me and we can sort something out. 😊</div></div></div>
   </div>
 
   <div class="divider"></div>
   <div class="sec-label">Meet the baker</div>
   <div class="about-section">
     <div class="about-inner">
-      <div class="avatar">YJ</div>
+      <img src="yunji.png" alt="Yunji" style="width:110px;height:110px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;">
       <div class="bio-name">Yunji</div>
-      <div class="bio-text">I started baking during the pandemic as a hobby — and before long I was making cakes for friends and family for birthdays and special occasions. Their joy and encouragement inspired me to share my passion with the wider community.<br><br>I love giving careful attention to each person's taste while using quality, healthier ingredients. I feel that handmade cakes are more personal and special in a way that store-bought ones simply can't match. I truly enjoy baking with purpose and creating something that brings joy to others. If you love handmade cakes as much as I do, shoot me a message and I'd love to bake for you! 🎂❤️</div>
+      <div class="bio-text">Hi everyone :) I stress bake!<br><br>It started as a way to unwind — and during the pandemic it turned into a full-on hobby. Before long I was making cakes for friends and family for birthdays and special occasions, and their joy and encouragement inspired me to share my passion with the wider community.<br><br>I put a lot of care into every order, tailoring each cake to the person and using quality, healthier ingredients wherever I can. Handmade cakes feel more personal and special in a way that shop-bought ones simply can't match — and honestly, I just love baking with purpose and knowing something I made brought a little joy to someone's day. If you love handmade cakes as much as I do, shoot me a message and I'd love to bake for you! 🎂❤️</div>
+      <div style="margin-top:18px;padding-top:16px;border-top:1px solid #f0f0f0;width:100%;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;color:#bbb;margin-bottom:8px;">More about Yunji</div>
+        <div style="font-size:13px;color:#555;line-height:1.8;">Originally from Seoul 🇰🇷, grew up in the Philippines 🇵🇭, and have called London home for almost a decade. Baking and sports are my two biggest passions — one fuels the other! 😄</div>
+      </div>
     </div>
   </div>
 
   <div class="cta-section">
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <div class="cta-btns">
       <a class="wa-btn" href="https://wa.me/447983876598">
-        <svg style="width:20px;height:20px;fill:#fff;flex-shrink:0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.531 5.845L.057 23.428a.5.5 0 0 0 .609.61l5.638-1.457A11.947 11.947 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.691-.516-5.222-1.414l-.375-.217-3.89 1.005 1.035-3.79-.236-.38A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-        </svg>
+        <svg style="width:19px;height:19px;fill:#fff;flex-shrink:0;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.531 5.845L.057 23.428a.5.5 0 0 0 .609.61l5.638-1.457A11.947 11.947 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.691-.516-5.222-1.414l-.375-.217-3.89 1.005 1.035-3.79-.236-.38A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         WhatsApp Yunji
       </a>
-      <a class="wa-btn" href="https://instagram.com/_yjbakes" style="background:#c13584;" onmouseover="this.style.background='#a02d72'" onmouseout="this.style.background='#c13584'">
-        <svg style="width:20px;height:20px;fill:#fff;flex-shrink:0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
+      <a class="wa-btn" href="https://instagram.com/_yjbakes" style="background:#c13584;">
+        <svg style="width:19px;height:19px;fill:#fff;flex-shrink:0;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         DM Yunji
       </a>
     </div>
@@ -328,23 +215,21 @@ function buildControls(){
   Object.entries(CONFIG).forEach(([key,cfg])=>{
     const g=document.createElement('div');g.className='option-group';g.id='group-'+key;
     const hasOther=cfg.options.includes('Other');
-    const otherInput=hasOther?`<input class="other-input" id="other-${key}" type="text" placeholder="Please specify..." style="display:none;" oninput="render()"/>`:'';
-    g.innerHTML=`<div class="opt-label">${cfg.label}</div><div class="opt-pill"><span class="dot-swatch" id="dot-${key}"></span><span class="val-text" id="val-${key}"></span><div class="arrow-btns"><button class="arr" onclick="cycle('${key}',-1)" aria-label="Previous">&#8592;</button><button class="arr" onclick="cycle('${key}',1)" aria-label="Next">&#8594;</button></div></div>${otherInput}`;
+    const otherHtml=hasOther?`<input class="other-input" id="other-${key}" type="text" placeholder="Please specify..." style="display:none;" oninput="render()"/>`:'';
+    g.innerHTML=`<div class="opt-label">${cfg.label}</div><div class="opt-pill"><span class="dot-swatch" id="dot-${key}"></span><span class="val-text" id="val-${key}"></span><div class="arrow-btns"><button class="arr" onclick="cycle('${key}',-1)">&#8592;</button><button class="arr" onclick="cycle('${key}',1)">&#8594;</button></div></div>${otherHtml}`;
     (cfg.side==='left'?left:right).appendChild(g);
   });
 }
 
-function adjustAlpha(hex,op){const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16),bl=c=>Math.round(c*op+255*(1-op));return `rgb(${bl(r)},${bl(g)},${bl(b)})`;}
-function lighten(hex){if(!hex||hex==='none')return '#fff';return `rgb(${Math.min(255,parseInt(hex.slice(1,3),16)+40)},${Math.min(255,parseInt(hex.slice(3,5),16)+40)},${Math.min(255,parseInt(hex.slice(5,7),16)+40)})`;}
-function darken(hex){if(!hex||hex==='none')return '#000';return `rgb(${Math.max(0,parseInt(hex.slice(1,3),16)-40)},${Math.max(0,parseInt(hex.slice(3,5),16)-40)},${Math.max(0,parseInt(hex.slice(5,7),16)-40)})`;}
+function adjustAlpha(hex,op){const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16),bl=c=>Math.round(c*op+255*(1-op));return`rgb(${bl(r)},${bl(g)},${bl(b)})`;}
+function lighten(hex){if(!hex||hex==='none')return'#fff';return`rgb(${Math.min(255,parseInt(hex.slice(1,3),16)+40)},${Math.min(255,parseInt(hex.slice(3,5),16)+40)},${Math.min(255,parseInt(hex.slice(5,7),16)+40)})`;}
 
 function drawCake(){
   const svg=document.getElementById('cakeSvg');
-  const CX=80,CW=124,lx=CX-CW/2;
-  const numLayers=state.layers+1; // 1,2,3
-  const TOTAL_SPONGE_H=numLayers===1?70:numLayers===2?80:90;
-  const LAYER_H=Math.floor(TOTAL_SPONGE_H/numLayers);
-  const JAM_H=6,FROSTING_H=13,TOPPING_H=16,CANDLE_H=22;
+  const CX=70,CW=110,lx=CX-CW/2;
+  const numLayers=state.layers+1;
+  const LAYER_H=numLayers===1?72:numLayers===2?38:28;
+  const JAM_H=5,FROSTING_H=12,TOPPING_H=14,CANDLE_H=20;
   const flavourColor=CONFIG.flavour.colors[state.flavour]||'#6b3a1f';
   const frostingColor=CONFIG.frosting.colors[state.frosting];
   const toppingColor=CONFIG.topping.colors[state.topping];
@@ -356,46 +241,30 @@ function drawCake(){
   const pid='pat_'+textureName+'_'+state.flavour;
   if(textureName==='chiffon'){defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="12" height="12"><rect width="12" height="12" fill="${flavourColor}"/><circle cx="6" cy="6" r="2.5" fill="${adjustAlpha(flavourColor,0.28)}"/></pattern>`);}
   else if(textureName==='glutenfree'){defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="${flavourColor}"/><line x1="0" y1="5" x2="10" y2="5" stroke="${adjustAlpha(flavourColor,0.35)}" stroke-width="1.5"/><line x1="5" y1="0" x2="5" y2="10" stroke="${adjustAlpha(flavourColor,0.35)}" stroke-width="1.5"/></pattern>`);}
-  else{defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="16" height="8"><rect width="16" height="8" fill="${flavourColor}"/><line x1="0" y1="0" x2="16" y2="0" stroke="${adjustAlpha(flavourColor,0.28)}" stroke-width="1"/><line x1="0" y1="4" x2="16" y2="4" stroke="${adjustAlpha(flavourColor,0.18)}" stroke-width="0.5"/></pattern>`);}
-
-  const totalH=TOTAL_SPONGE_H+(numLayers-1)*(hasJam?JAM_H:0)+FROSTING_H+(hasTopping?TOPPING_H:0)+CANDLE_H+30;
-  const viewH=Math.max(220,totalH+20);
-  svg.setAttribute('viewBox',`0 0 160 ${viewH}`);svg.style.height=viewH+'px';
-
-  let y=viewH-20;
-  // plate
-  parts.push(`<rect x="${lx-12}" y="${y}" width="${CW+24}" height="8" rx="3" fill="#d8d8d8"/>`);
+  else{defs.push(`<pattern id="${pid}" patternUnits="userSpaceOnUse" width="16" height="8"><rect width="16" height="8" fill="${flavourColor}"/><line x1="0" y1="0" x2="16" y2="0" stroke="${adjustAlpha(flavourColor,0.28)}" stroke-width="1"/></pattern>`);}
+  const totalSponge=numLayers*LAYER_H+(hasJam?(numLayers-1)*JAM_H:0);
+  const totalH=totalSponge+FROSTING_H+(hasTopping?TOPPING_H:0)+CANDLE_H+30;
+  const viewH=Math.max(200,totalH+20);
+  svg.setAttribute('viewBox',`0 0 140 ${viewH}`);svg.style.height=viewH+'px';
+  let y=viewH-18;
+  parts.push(`<rect x="${lx-10}" y="${y}" width="${CW+20}" height="7" rx="3" fill="#d8d8d8"/>`);
   y-=2;
-
-  // draw layers bottom to top
   for(let i=numLayers-1;i>=0;i--){
     const layerTop=y-LAYER_H;
-    defs.push(`<clipPath id="sclip${i}"><rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3"/></clipPath>`);
+    defs.push(`<clipPath id="sc${i}"><rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3"/></clipPath>`);
     parts.push(`<rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3" fill="url(#${pid})" stroke="#00000012" stroke-width="0.5"/>`);
-    // jam stripe inside this layer (not on top layer, between layers)
-    if(hasJam&&i<numLayers-1){
-      const jamY=layerTop+LAYER_H-JAM_H/2;
-      parts.push(`<rect x="${lx}" y="${jamY}" width="${CW}" height="${JAM_H}" fill="${jamColor}" clip-path="url(#sclip${i})"/>`);
-      parts.push(`<rect x="${lx}" y="${jamY}" width="${CW}" height="1.5" fill="${lighten(jamColor)}" opacity="0.5" clip-path="url(#sclip${i})"/>`);
-      parts.push(`<line x1="${lx}" y1="${jamY}" x2="${lx+CW}" y2="${jamY}" stroke="#00000020" stroke-width="0.5"/>`);
-    }
     parts.push(`<rect x="${lx}" y="${layerTop}" width="${CW}" height="${LAYER_H}" rx="3" fill="none" stroke="#00000018" stroke-width="0.5"/>`);
     y=layerTop;
-    // jam separator between layers
     if(hasJam&&i>0){
-      parts.push(`<rect x="${lx-3}" y="${y-JAM_H}" width="${CW+6}" height="${JAM_H}" fill="${jamColor}" stroke="#00000010" stroke-width="0.5"/>`);
-      parts.push(`<rect x="${lx-3}" y="${y-JAM_H}" width="${CW+6}" height="1.5" fill="${lighten(jamColor)}" opacity="0.4"/>`);
+      parts.push(`<rect x="${lx-2}" y="${y-JAM_H}" width="${CW+4}" height="${JAM_H}" fill="${jamColor}" stroke="#00000010" stroke-width="0.5"/>`);
+      parts.push(`<rect x="${lx-2}" y="${y-JAM_H}" width="${CW+4}" height="1.5" fill="${lighten(jamColor)}" opacity="0.4"/>`);
       y-=JAM_H;
     }
   }
-
-  // frosting
-  parts.push(`<rect x="${lx-5}" y="${y-FROSTING_H}" width="${CW+10}" height="${FROSTING_H}" rx="3" fill="${frostingColor}" stroke="#00000012" stroke-width="0.5"/>`);
+  parts.push(`<rect x="${lx-4}" y="${y-FROSTING_H}" width="${CW+8}" height="${FROSTING_H}" rx="3" fill="${frostingColor}" stroke="#00000012" stroke-width="0.5"/>`);
   y-=FROSTING_H;
-  // toppings
-  if(hasTopping){const spacing=CW/8;for(let i=0;i<8;i++){const tx=lx+spacing/2+i*spacing;if(state.topping===2){parts.push(`<rect x="${tx-4}" y="${y-TOPPING_H+3}" width="8" height="10" rx="2" fill="${toppingColor}" opacity="0.92"/>`);}else{parts.push(`<circle cx="${tx}" cy="${y-TOPPING_H/2}" r="5" fill="${toppingColor}" opacity="0.92"/>`);}}y-=TOPPING_H;}
-  // candle
-  parts.push(`<rect x="${CX-2.5}" y="${y-CANDLE_H}" width="5" height="${CANDLE_H}" rx="1.5" fill="#f0e0b8"/><ellipse cx="${CX}" cy="${y-CANDLE_H}" rx="3" ry="4" fill="#ffd060"/><ellipse cx="${CX}" cy="${y-CANDLE_H-3}" rx="1.5" ry="2" fill="#ff8020"/>`);
+  if(hasTopping){const sp=CW/7;for(let i=0;i<7;i++){const tx=lx+sp/2+i*sp;if(state.topping===2){parts.push(`<rect x="${tx-3}" y="${y-TOPPING_H+2}" width="7" height="9" rx="2" fill="${toppingColor}" opacity="0.92"/>`);}else{parts.push(`<circle cx="${tx}" cy="${y-TOPPING_H/2}" r="4.5" fill="${toppingColor}" opacity="0.92"/>`);}}y-=TOPPING_H;}
+  parts.push(`<rect x="${CX-2}" y="${y-CANDLE_H}" width="4" height="${CANDLE_H}" rx="1.5" fill="#f0e0b8"/><ellipse cx="${CX}" cy="${y-CANDLE_H}" rx="2.5" ry="3.5" fill="#ffd060"/><ellipse cx="${CX}" cy="${y-CANDLE_H-3}" rx="1.5" ry="1.5" fill="#ff8020"/>`);
   svg.innerHTML=`<defs>${defs.join('')}</defs>${parts.join('')}`;
 }
 
@@ -406,87 +275,18 @@ function updatePills(){
     if(d)d.style.background=cfg.dotColors[idx];
     if(o)o.style.display=cfg.options[idx]==='Other'?'block':'none';
   });
-  // hide jam when single layer
   const jamGroup=document.getElementById('group-jam');
-  if(jamGroup) jamGroup.style.display=state.layers===0?'none':'flex';
+  if(jamGroup)jamGroup.style.display=state.layers===0?'none':'flex';
 }
 function updateSummary(){
   document.getElementById('summaryChips').innerHTML=Object.entries(CONFIG).map(([key,cfg])=>{
     const idx=state[key];
-    if(key==='jam'&&(idx===0||state.layers===0))return '';
-    if(key==='topping'&&idx===4)return '';
-    return `<div class="chip"><span class="chip-dot" style="background:${cfg.dotColors[idx]}"></span>${cfg.options[idx]} ${cfg.label.toLowerCase()}</div>`;
+    if(key==='jam'&&(idx===0||state.layers===0))return'';
+    if(key==='topping'&&idx===4)return'';
+    return`<div class="chip"><span class="chip-dot" style="background:${cfg.dotColors[idx]}"></span>${cfg.options[idx]} ${cfg.label.toLowerCase()}</div>`;
   }).filter(Boolean).join('');
 }
 function render(){updatePills();drawCake();updateSummary();}
 buildControls();render();
 
-// ---- Community comments (persistent storage) ----
-async function loadComments(){
-  const list=document.getElementById('commentsList');
-  try{
-    const res=await window.storage.get('yjbakes-comments',true);
-    const comments=res?JSON.parse(res.value):[];
-    renderComments(comments);
-  }catch(e){renderComments([]);}
-}
-
-function renderComments(comments){
-  const list=document.getElementById('commentsList');
-  if(!comments.length){list.innerHTML='<div class="no-comments">Be the first to share your love of cake! 🎂</div>';return;}
-  list.innerHTML=comments.slice().reverse().map(c=>{
-    const initials=c.name.trim().split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'?';
-    return `<div class="comment-card">
-      <div class="comment-header">
-        <div class="comment-avatar">${initials}</div>
-        <div class="comment-name">${escHtml(c.name)}</div>
-        ${c.fav?`<div class="comment-fav">🎂 ${escHtml(c.fav)}</div>`:''}
-      </div>
-      ${c.text?`<div class="comment-text">${escHtml(c.text)}</div>`:''}
-    </div>`;
-  }).join('');
-}
-
-function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-
-async function submitComment(){
-  const name=document.getElementById('commName').value.trim();
-  const fav=document.getElementById('commFav').value.trim();
-  const text=document.getElementById('commText').value.trim();
-  if(!name){alert('Please enter your name!');return;}
-  if(!fav&&!text){alert('Please share something — your favourite cake or a thought!');return;}
-  const btn=document.querySelector('.comm-submit');
-  btn.textContent='Saving…';btn.disabled=true;
-  try{
-    let comments=[];
-    try{const res=await window.storage.get('yjbakes-comments',true);if(res)comments=JSON.parse(res.value);}catch(e){}
-    comments.push({name,fav,text,ts:Date.now()});
-    await window.storage.set('yjbakes-comments',JSON.stringify(comments),true);
-    renderComments(comments);
-    document.getElementById('commName').value='';
-    document.getElementById('commFav').value='';
-    document.getElementById('commText').value='';
-  }catch(e){alert('Could not save — please try again.');}
-  btn.textContent='Share ❤️';btn.disabled=false;
-}
-loadComments();
-
-// Instagram embed — note: due to browser privacy restrictions, direct Instagram API
-// access requires authentication. The grid links to the profile instead.
-(function(){
-  const grid=document.getElementById('igGrid');
-  grid.innerHTML=`
-    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;">
-      <div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c13584" stroke="none"/></svg>
-        <span style="font-size:10px;color:#c13584;letter-spacing:0.5px;">@_yjbakes</span>
-      </div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
-    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
-    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
-    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
-    <a class="ig-tile" href="https://instagram.com/_yjbakes" target="_blank" style="text-decoration:none;cursor:pointer;"><div class="ig-tile-placeholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg></div></a>
-  `;
-})();
 </script>
