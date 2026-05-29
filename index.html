@@ -155,14 +155,13 @@ body{-webkit-text-size-adjust:100%;}
   <div class="divider"></div>
   <div class="sec-label">From the kitchen</div>
   <div class="ig-section">
-    <div class="ig-photo-grid" id="igGrid">
-      <div class="ig-empty">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg>
-        <span>Add your cake photos below</span>
-      </div>
+    <div class="ig-photo-grid">
+      <div class="ig-tile"><img src="cake1.png" alt="Raspberry lemon cake"></div>
+      <div class="ig-tile"><img src="cake2.png" alt="Carrot cake with pecans"></div>
+      <div class="ig-tile"><img src="cake3.png" alt="Mango coconut cake slice"></div>
+      <div class="ig-tile"><img src="cake4.png" alt="Strawberry cream cake"></div>
+      <div class="ig-tile"><img src="cake5.png" alt="Black forest cake"></div>
     </div>
-    <input type="file" id="igFileInput" accept="image/*" multiple style="display:none;">
-    <button class="ig-add-btn" onclick="document.getElementById('igFileInput').click()">+ Add photos</button>
     <a class="ig-logo-link" href="https://instagram.com/_yjbakes" target="_blank">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
       @_yjbakes
@@ -185,10 +184,10 @@ body{-webkit-text-size-adjust:100%;}
     <div class="about-inner">
       <img src="yunji.png" alt="Yunji" style="width:110px;height:110px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;">
       <div class="bio-name">Yunji</div>
-      <div class="bio-text">Hi everyone :) I stress bake!<br><br>It started as a way to unwind — and during the pandemic it turned into a full-on hobby. Before long I was making cakes for friends and family for birthdays and special occasions, and their joy and encouragement inspired me to share my passion with the wider community.<br><br>I put a lot of care into every order, tailoring each cake to the person and using quality, healthier ingredients wherever I can. Handmade cakes feel more personal and special in a way that shop-bought ones simply can't match — and honestly, I just love baking with purpose and knowing something I made brought a little joy to someone's day. If you love handmade cakes as much as I do, shoot me a message and I'd love to bake for you! 🎂❤️</div>
+      <div class="bio-text">Hi everyone :) I stress bake!<br><br>It started as a way to unwind from my stress at uni and during the pandemic, it turned into a full-on hobby. The hobby continued for a few years then I eventually started baking for friends and family for birthdays and special occasions. Their joy and encouragement inspired me to share my passion with the wider community.<br><br>I prefer hand-made bakes because I put a lot of care into each one I make and can tailor it to each person using quality, healthier ingredients. They always feel more personal and meaningful than store-bought ones. If you love handmade cakes as much as I do, shoot me a message. I'd love to bake for you! 🎂❤️</div>
       <div style="margin-top:18px;padding-top:16px;border-top:1px solid #f0f0f0;width:100%;">
         <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;color:#bbb;margin-bottom:8px;">More about Yunji</div>
-        <div style="font-size:13px;color:#555;line-height:1.8;">Originally from Seoul 🇰🇷, grew up in the Philippines 🇵🇭, and have called London home for almost a decade. Baking and sports are my two biggest passions — one fuels the other! 😄</div>
+        <div style="font-size:13px;color:#555;line-height:1.8;">Originally from Seoul 🇰🇷, grew up in the Philippines 🇵🇭, and have called London home for almost a decade. Baking and sports are my two biggest passions! 😄</div>
       </div>
     </div>
   </div>
@@ -300,23 +299,4 @@ function updateSummary(){
 function render(){updatePills();drawCake();updateSummary();}
 buildControls();render();
 
-// Photo grid
-const igPhotos=[];
-function renderGrid(){
-  const grid=document.getElementById('igGrid');
-  if(!igPhotos.length){
-    grid.innerHTML='<div class="ig-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ddd" stroke="none"/></svg><span>Add your cake photos below</span></div>';
-    return;
-  }
-  grid.innerHTML=igPhotos.map((src,i)=>`<div class="ig-tile"><img src="${src}" alt="cake ${i+1}"><button onclick="removePhoto(${i})" title="Remove">✕</button></div>`).join('');
-}
-function removePhoto(i){igPhotos.splice(i,1);renderGrid();}
-document.getElementById('igFileInput').addEventListener('change',function(e){
-  Array.from(e.target.files).forEach(f=>{
-    const r=new FileReader();
-    r.onload=ev=>{igPhotos.push(ev.target.result);renderGrid();};
-    r.readAsDataURL(f);
-  });
-  this.value='';
-});
 </script>
